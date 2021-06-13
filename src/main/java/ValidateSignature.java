@@ -1,11 +1,7 @@
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
-import org.w3c.dom.NodeList;
-
-import javax.xml.crypto.MarshalException;
 import javax.xml.crypto.dsig.XMLSignature;
-import javax.xml.crypto.dsig.XMLSignatureException;
 import javax.xml.crypto.dsig.XMLSignatureFactory;
 import javax.xml.crypto.dsig.dom.DOMValidateContext;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -34,10 +30,11 @@ public class ValidateSignature {
   //================================================================================
   // VALIDATE SIGNATURE
   //================================================================================
+  // boolean valid = validateSignature(document, "Person");
   private static boolean validateSignature(Document document, String elementName) throws Exception  {
 
     //GET SIGNATURE NODE
-    Node                signatureNode = document.getElementsByTagNameNS(XMLSignature.XMLNS, "Signature").item(0);
+    Node signatureNode = document.getElementsByTagNameNS(XMLSignature.XMLNS, "Signature").item(0);
 
     //VALIDATE SIGNATURE
     Element             element    = (Element) document.getElementsByTagName(elementName).item(0);     //FIX
