@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:fu="http://www.fu.gov.si/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><soapenv:Body><fu:InvoiceResponse Id="data"><fu:Header><fu:MessageID>4e64a93a-40fa-4c02-afb1-488534b85e4c</fu:MessageID><fu:DateTime>2021-06-12T03:20:11</fu:DateTime>
+                   </fu:Header><fu:UniqueInvoiceID>bede9ead-51bf-44cd-96e5-2626b5e020e3</fu:UniqueInvoiceID>
+                 <Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/><Reference URI="#data"><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><DigestValue>N2CfCMJ5JvTtwnUuYzfCvZ4b9wfFMGMJwRQCxVK+ILM=</DigestValue></Reference></SignedInfo><SignatureValue>BV6JQt33gwjZEb/1PoBQ4FJdjbMPCJvcRHjTZ4tLpXrW5z3hWezHWbu+iTr8QJZWn+nTJR7ekhcG
+y93DncQNhFHAtESg0TlXSdEReXzeLcH+Wcsd+MVRv4dbVgATd6xGWPVg6lC66mTnVpNCswIrRAL3
+t45bbfGiQ8+46Dgg6JUW2hrWyhs4eNOlG+SCqzo8dXFKS6j7NgtNYOB4mNPVHi9w9YpdWkfXAqOS
+0zRUIPVW3PNUsA9UYRZTYYdCfh1u+BgOYRrzcvFVBeNmeTUQwZxfEmKSMfYWQpekpTPiMhB5Ky+Q
+IaDKDy07Po3yDm8HqRwe6Ra8QObix1b1P2GTYA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=DavPotRacTEST + OID.2.5.4.5=1237997210011, OU=systems, O=state authorities, C=SI</X509SubjectName><X509IssuerSerial><X509IssuerName>CN=SIGOV-CA,2.5.4.97=#130e56415453492d3137363539393537,O=Republika Slovenija,C=SI</X509IssuerName><X509SerialNumber>64766398760318685497656163882</X509SerialNumber></X509IssuerSerial><X509Certificate>MIIGJDCCBIygAwIBAgINANFFgmgAAAAAVn0+KjANBgkqhkiG9w0BAQsFADBXMQswCQYDVQQGEwJT
+STEcMBoGA1UEChMTUmVwdWJsaWthIFNsb3ZlbmlqYTEXMBUGA1UEYRMOVkFUU0ktMTc2NTk5NTcx
+ETAPBgNVBAMTCFNJR09WLUNBMB4XDTIwMDUwNjA4MTE1OVoXDTI1MDUwNjA4NDE1OVowaTELMAkG
+A1UEBhMCU0kxGjAYBgNVBAoTEXN0YXRlIGF1dGhvcml0aWVzMRAwDgYDVQQLEwdzeXN0ZW1zMSww
+FAYDVQQDEw1EYXZQb3RSYWNURVNUMBQGA1UEBRMNMTIzNzk5NzIxMDAxMTCCASIwDQYJKoZIhvcN
+AQEBBQADggEPADCCAQoCggEBAODJIvOX5DfmBO1sL+tvRr+YjRYZo1qDlGuw4kRqvmYIhKqNRPPt
+kp51qO6kaqbhX4gvj5LHU03fhBje4YQSd/6j+kNPFuVKvyvyhYkk3ogLEQh9rBXxxq875Mpmtewv
+OU2abDm0ACyvINya5g9ap0CDeDPd5hRJcQ1Kwhby2CtCT3VHc7YCamv8pZ2tZZsmk/v4GEbsGMjq
+SgWV3PfHcKOElzDua+hHC6ggFQx04p7RqA/veubx2XZIWYjAc725TA6CKzs0EZQMcvDV4TU5VNyy
+GpWpMPVeyj03cbypVp0uHoZMSechRUfiRmchT4hyBASPhkTtO4xe2NemuG5kaYMCAwEAAaOCAlsw
+ggJXMA4GA1UdDwEB/wQEAwIFoDBABgNVHSAEOTA3MDUGCisGAQQBr1kBCQkwJzAlBggrBgEFBQcC
+ARYZaHR0cDovL3d3dy5jYS5nb3Yuc2kvY3BzLzB3BggrBgEFBQcBAQRrMGkwPgYIKwYBBQUHMAKG
+Mmh0dHA6Ly93d3cuc2lnb3YtY2EuZ292LnNpL2NydC9zaWdvdi1jYTItY2VydHMucDdjMCcGCCsG
+AQUFBzABhhtodHRwOi8vb2NzcC5zaWdvdi1jYS5nb3Yuc2kwIQYDVR0RBBowGIEWbWFyamFuLmFt
+YnJvemljQGdvdi5zaTCCATIGA1UdHwSCASkwggElMIGxoIGuoIGrhixodHRwOi8vd3d3LnNpZ292
+LWNhLmdvdi5zaS9jcmwvc2lnb3YtY2EyLmNybIZ7bGRhcDovL3g1MDAuZ292LnNpL2NuPVNJR09W
+LUNBLG9yZ2FuaXphdGlvbklkZW50aWZpZXI9VkFUU0ktMTc2NTk5NTcsbz1SZXB1Ymxpa2ElMjBT
+bG92ZW5pamEsYz1TST9jZXJ0aWZpY2F0ZVJldm9jYXRpb25MaXN0MG+gbaBrpGkwZzELMAkGA1UE
+BhMCU0kxHDAaBgNVBAoTE1JlcHVibGlrYSBTbG92ZW5pamExFzAVBgNVBGETDlZBVFNJLTE3NjU5
+OTU3MREwDwYDVQQDEwhTSUdPVi1DQTEOMAwGA1UEAxMFQ1JMMzQwEwYDVR0jBAwwCoAIRl5A5VPt
+/v4wEQYDVR0OBAoECEIy3tUNJ2R8MAkGA1UdEwQCMAAwDQYJKoZIhvcNAQELBQADggGBABzHlENX
+4aW4HGn00AmFwPYYWDJ86A5q+atRhsfBerFSR5qRpnsD4CojqyIbGxtzrT3SwR1MOqJOuIOazP03
+bMCzRDnNLvWeyUfmbrZ+LrTCoik5Y2teDTisuIeALDjT8avbPGrO69SkDaKIKH3zRgFAxAFziRKz
+JzARVs2aY2pjCkiDUJO4Ha2tTZ1xAcDZWMNDXcYlui+fVx5Ps2L71kxD5cQzVdMdP80o3IDUb8et
+hQ1JVdQjGswn662hfaZ1v9pIFOdxgzMp0alpuHlT3OOui/SbwxPV4YZUKRpQHYUA6aR66rEDozPf
+r58XNp2z0pUzT4O3Llr2mAVkeeTMOTzT5fraqr3+UpgRGaVoCUxIWo4JG9B2uZ8nv9a72ASPv9c0
+srenLrBHziuoVd7IndL/gIElIgABz6ygQsY3LQ24j1QkiTykOxMbHxruzPhSW0B4ISohWFSYtyz6
+FXQeE9k63quLXpGuEumQC1H/KeLnTRAkv+2O2v0qexCqLh7Gcg==</X509Certificate></X509Data><KeyValue><RSAKeyValue><Modulus>4Mki85fkN+YE7Wwv629Gv5iNFhmjWoOUa7DiRGq+ZgiEqo1E8+2SnnWo7qRqpuFfiC+PksdTTd+E
+GN7hhBJ3/qP6Q08W5Uq/K/KFiSTeiAsRCH2sFfHGrzvkyma17C85TZpsObQALK8g3JrmD1qnQIN4
+M93mFElxDUrCFvLYK0JPdUdztgJqa/ylna1lmyaT+/gYRuwYyOpKBZXc98dwo4SXMO5r6EcLqCAV
+DHTintGoD+965vHZdkhZiMBzvblMDoIrOzQRlAxy8NXhNTlU3LIalakw9V7KPTdxvKlWnS4ehkxJ
+5yFFR+JGZyFPiHIEBI+GRO07jF7Y16a4bmRpgw==</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue></KeyInfo></Signature></fu:InvoiceResponse>
+                </soapenv:Body>
+            </soapenv:Envelope>

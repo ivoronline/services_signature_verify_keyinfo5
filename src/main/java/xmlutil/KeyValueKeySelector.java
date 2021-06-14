@@ -1,3 +1,5 @@
+package xmlutil;
+
 import javax.xml.crypto.AlgorithmMethod;
 import javax.xml.crypto.KeySelector;
 import javax.xml.crypto.KeySelectorException;
@@ -11,6 +13,7 @@ import java.security.KeyException;
 import java.security.PublicKey;
 import java.util.List;
 
+//This Class is used when validating with <KeyInfo>
 public class KeyValueKeySelector extends KeySelector {
 
   public KeySelectorResult select(KeyInfo keyInfo, Purpose purpose, AlgorithmMethod method, XMLCryptoContext context) throws KeySelectorException {
