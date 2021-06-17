@@ -7,7 +7,7 @@ import javax.xml.crypto.dsig.XMLSignature;
 import javax.xml.crypto.dsig.XMLSignatureFactory;
 import javax.xml.crypto.dsig.dom.DOMValidateContext;
 import javax.xml.parsers.DocumentBuilderFactory;
-import java.io.FileInputStream;
+import java.io.InputStream;
 
 public class XMLUtil {
 
@@ -16,10 +16,16 @@ public class XMLUtil {
   //================================================================================
   // Document document = readXMLFromFile(fileXMLInput);
   public static Document readXMLFromFile(String fileName) throws Exception {
+
+    //READ DOCUMENT FROM FILE
     DocumentBuilderFactory documentFactory = DocumentBuilderFactory.newInstance();
                            documentFactory.setNamespaceAware(true);
-    Document document = documentFactory.newDocumentBuilder().parse(new FileInputStream(fileName));
-    return   document;
+    InputStream            inputStream     = XMLUtil.class.getResourceAsStream(fileName);
+    Document               document        = documentFactory.newDocumentBuilder().parse(inputStream);
+
+    //RETURN DOCUMENT
+    return document;
+
   }
 
   //================================================================================
@@ -31,7 +37,7 @@ public class XMLUtil {
     //VALIDATE SIGNATURE USING KEY INFO
     Node                signatureNode = document.getElementsByTagNameNS(XMLSignature.XMLNS, "Signature").item(0);
     DOMValidateContext  valContext    = new DOMValidateContext(new KeyValueKeySelector(), signatureNode);
-                        valContext.setIdAttributeNS((Element) signatureNode.getParentNode(), null, "Id");  //FIX
+                        valContext.setIdAttributeNS((Element) signatureNode.getParentNode(),null,"Id"); //FIX
     XMLSignatureFactory factory       = XMLSignatureFactory.getInstance("DOM");
     XMLSignature        signature     = factory.unmarshalXMLSignature(valContext);
     boolean             valid         = signature.validate(valContext);

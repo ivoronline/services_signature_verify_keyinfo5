@@ -3,7 +3,7 @@ import xmlutil.XMLUtil;
 
 public class ValidateSignature {
 
-  static String fileXMLInput = "src/main/resources/PersonSignedWithKeyInfo.xml";
+  static String fileXMLInput = "/PersonSignedWithKeyInfo.xml";
 
   //================================================================================
   // MAIN
