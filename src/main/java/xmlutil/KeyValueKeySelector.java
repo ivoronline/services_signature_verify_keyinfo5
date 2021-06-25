@@ -6,13 +6,11 @@ import javax.xml.crypto.KeySelectorException;
 import javax.xml.crypto.KeySelectorResult;
 import javax.xml.crypto.XMLCryptoContext;
 import javax.xml.crypto.XMLStructure;
-import javax.xml.crypto.dsig.SignatureMethod;
 import javax.xml.crypto.dsig.keyinfo.KeyInfo;
 import javax.xml.crypto.dsig.keyinfo.KeyValue;
 import java.security.KeyException;
 import java.security.PublicKey;
 import java.util.Iterator;
-import java.util.List;
 
 //This Class is used when validating with <KeyInfo>
 public class KeyValueKeySelector extends KeySelector {
