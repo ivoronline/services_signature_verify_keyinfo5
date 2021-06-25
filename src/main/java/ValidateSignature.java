@@ -3,13 +3,14 @@ import xmlutil.XMLUtil;
 
 public class ValidateSignature {
 
-  static String fileXMLInput = "/PersonSignedWithKeyInfo.xml";
+  static String fileXMLInput1 = "/PersonSignedKey.xml";
+  static String fileXMLInput2 = "/PersonSignedWithKeyInfo.xml";
 
   //================================================================================
   // MAIN
   //================================================================================
   public static void main(String[] args) throws Exception {
-    Document document = XMLUtil.readXMLFromFile(fileXMLInput);
+    Document document = XMLUtil.readXMLFromFile(fileXMLInput1);
     boolean  valid    = XMLUtil.validateSignatureUsingKeyinfo(document);
     System.out.println(valid);
   }
