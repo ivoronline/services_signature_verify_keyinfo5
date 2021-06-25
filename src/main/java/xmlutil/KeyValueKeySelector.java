@@ -11,30 +11,35 @@ import javax.xml.crypto.dsig.keyinfo.KeyInfo;
 import javax.xml.crypto.dsig.keyinfo.KeyValue;
 import java.security.KeyException;
 import java.security.PublicKey;
+import java.util.Iterator;
 import java.util.List;
 
 //This Class is used when validating with <KeyInfo>
 public class KeyValueKeySelector extends KeySelector {
 
-  public KeySelectorResult select(KeyInfo keyInfo, Purpose purpose, AlgorithmMethod method, XMLCryptoContext context) throws KeySelectorException {
+  public KeySelectorResult select(
+    KeyInfo          keyInfo,
+    Purpose          purpose,
+    AlgorithmMethod  method,
+    XMLCryptoContext context) throws KeySelectorException
+  {
 
-    //PREPARE VARIABLES
-    SignatureMethod sm  = (SignatureMethod) method;
-    List           list = keyInfo.getContent();
-    PublicKey      pk   = null;
-
-    //LOAD PUBLIC KEY FROM <KeyValue>
-    for (int i = 0; i < list.size(); i++) {
-      XMLStructure xmlStructure = (XMLStructure) list.get(i);
-      if (xmlStructure instanceof KeyValue) {
-        try                     { pk = ((KeyValue) xmlStructure).getPublicKey();                         }
-        catch (KeyException ke) { System.out.println("Exception 1"); throw new KeySelectorException(ke); }
-        break;
+    //Find <KeyValue> inside <KeyInfo>
+    try {
+      Iterator keyInfoIterator = keyInfo.getContent().iterator();
+      while (keyInfoIterator.hasNext()) {
+        XMLStructure xmlStructure = (XMLStructure) keyInfoIterator.next();;
+        if (xmlStructure instanceof KeyValue) {
+          KeyValue  keyValue  = (KeyValue) xmlStructure;
+          PublicKey publicKey = keyValue.getPublicKey();
+          return new SimpleKeySelectorResult(publicKey);
+        }
       }
     }
+    catch (KeyException ke) { throw new KeySelectorException(ke); }
 
-    //RETURN PUBLIC KEY
-    return new SimpleKeySelectorResult(pk);
+    //THROW EXCEPTION
+		throw new KeySelectorException("No key found!");
 
   }
 

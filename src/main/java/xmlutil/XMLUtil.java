@@ -34,7 +34,7 @@ public class XMLUtil {
   // boolean valid = XMLUtil.validateSignatureUsingKeyinfo(document, "Person");
   public static boolean validateSignatureUsingKeyinfo(Document document) throws Exception  {
 
-    //VALIDATE SIGNATURE USING KEY INFO
+    //VALIDATE SIGNATURE USING KeyValue FROM <KeyInfo>
     Node                signatureNode = document.getElementsByTagNameNS(XMLSignature.XMLNS, "Signature").item(0);
     DOMValidateContext  valContext    = new DOMValidateContext(new KeyValueKeySelector(), signatureNode);
                         valContext.setIdAttributeNS((Element) signatureNode.getParentNode(),null,"Id"); //FIX
