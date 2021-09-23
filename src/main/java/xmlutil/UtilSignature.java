@@ -10,10 +10,10 @@ import javax.xml.crypto.dsig.dom.DOMValidateContext;
 public class UtilSignature {
 
   //================================================================================
-  // VALIDATE SIGNATURE USING KEY INFO
+  // VALIDATE SIGNATURE USING KEY INFO VALUE
   //================================================================================
-  // boolean valid = XMLUtil.validateSignatureUsingKeyinfo(document, "Person");
-  public static boolean validateSignatureUsingKeyinfo(Document document) throws Exception  {
+  // boolean valid = XMLUtil.validateSignatureUsingKeyInfoValue(document, "Person");
+  public static boolean validateSignatureUsingKeyInfoValue(Document document) throws Exception  {
 
     //VALIDATE SIGNATURE USING KeyValue FROM <KeyInfo>
     Node                signatureNode = document.getElementsByTagNameNS(XMLSignature.XMLNS, "Signature").item(0);

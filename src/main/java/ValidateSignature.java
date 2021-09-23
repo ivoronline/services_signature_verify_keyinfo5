@@ -12,7 +12,7 @@ public class ValidateSignature {
   //================================================================================
   public static void main(String[] args) throws Exception {
     Document document = UtilXML.fileToDocument(fileXMLInput1);
-    boolean  valid    = UtilSignature.validateSignatureUsingKeyinfo(document);
+    boolean  valid    = UtilSignature.validateSignatureUsingKeyInfoValue(document);
     System.out.println(valid);
   }
 
