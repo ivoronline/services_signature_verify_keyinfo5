@@ -1,5 +1,6 @@
 import org.w3c.dom.Document;
-import xmlutil.XMLUtil;
+import xmlutil.UtilSignature;
+import xmlutil.UtilXML;
 
 public class ValidateSignature {
 
@@ -10,8 +11,8 @@ public class ValidateSignature {
   // MAIN
   //================================================================================
   public static void main(String[] args) throws Exception {
-    Document document = XMLUtil.readXMLFromFile(fileXMLInput1);
-    boolean  valid    = XMLUtil.validateSignatureUsingKeyinfo(document);
+    Document document = UtilXML.fileToDocument(fileXMLInput1);
+    boolean  valid    = UtilSignature.validateSignatureUsingKeyinfo(document);
     System.out.println(valid);
   }
 
